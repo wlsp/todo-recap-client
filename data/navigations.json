@@ -1,0 +1,27 @@
+{
+  "headerItems": {
+      "logo": "/src/assets/misc-4.svg",
+      "navItems": [
+        {
+          "link": "Todos",
+          "path":  "/"
+        },
+        {
+          "link": "Open",
+          "path":  "/status/open"
+        },
+        {
+          "link": "In Progress",
+          "path": "/status/in_progress"
+        },
+        {
+          "link": "Done",
+          "path": "/status/done"
+        }
+      ]
+    },
+  "footerItems" : {
+      "showFullYear": true,
+      "company": "wlsp.tech"
+    }
+}

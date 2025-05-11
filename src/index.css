@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* Default (dark mode) */
+:root {
+    /* Base neutral colors */
+    --color-dark-bg: #1e1e2f;
+    --color-dark-surface: #2a2a3c;
+    --color-dark-text: #e0e0e0;
+    --color-darkgray: #2a2a3c;
+    --color-lightgray: #f5f5f5;
+    --color-header-active: #818cf8;
+    --color-header-hover: #a5b4fc;
+    --color-text-dark: #e0e0e0;
+
+    /* Semantic colors */
+    --open: #22c55e;
+    --in-progress: #eab308;
+    --done: #ef4444;
+
+    /* Action Button colors*/
+    /*SAVE */
+    --color-button-save-bg: #4ade80;
+    --color-button-save-text: #064e3b;
+    /*CANCEL*/
+    --color-button-cancel-bg: #1f2937;
+    --color-button-cancel-text: #e0e0e0;
+    /*DETAIL */
+    --color-button-detail-bg: #93c5fd;
+    --color-button-detail-text: #3b82f6;
+    /*EDIT*/
+    --color-button-edit-bg: #fbbf24;
+    --color-button-edit-text: #7f3f00;
+    /*ADVANCE*/
+    --color-button-advance-bg: #34d399;
+    --color-button-advance-text: #064e3b;
+    /*UNDO*/
+    --color-button-undo-bg: #6b7280;
+    --color-button-undo-text: #e5e7eb;
+
+    /* Animation */
+    --animate-spin-path: spin-path 1s linear infinite;
+
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: dark light;
+    color: var(--color-dark-text);
+    background-color: var(--color-dark-bg);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --bg-header: var(--color-darkgray);
+    --bg-footer: var(--color-darkgray);
+    --bg-item: var(--color-darkgray);
+    --text-dark: var(--color-text-dark);
+}
+
+@keyframes spin-path {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+
+        --bg-header: #f5f5f5;
+        --bg-footer: #f5f5f5;
+        --bg-item: #ffffff;
+        --text-dark: #1f2937;
+
+        --color-button-save-bg: #d1fae5;
+        --color-button-save-text: #064e3b;
+        --color-button-cancel-bg: #f3f4f6;
+        --color-button-cancel-text: #1f2937;
+        --color-button-detail-bg: #bfdbfe;
+        --color-button-detail-text: #3b82f6;
+        --color-button-edit-bg: #fef08a;
+        --color-button-edit-text: #b45309;
+        --color-button-advance-bg: #bbf7d0;
+        --color-button-advance-text: #065f46;
+        --color-button-undo-bg: #e5e7eb;
+        --color-button-undo-text: #374151;
+    }
+}
+
+/* Utility classes for task status */
+.text-open {
+    color: var(--open);
+}
+
+.text-in_progress {
+    color: var(--in-progress);
+}
+
+.text-done {
+    color: var(--done);
+}
+
+/* Reset & base styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    transition: color .25s, background-color .25s;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    height: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+h1 {
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+#root {
+    isolation: isolate;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+a {
+    font-weight: 500;
+    color: #8ab4f8;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #aecbfa;
+}
+
+/*button/bg helpers */
+.bg-surface {
+    background-color: var(--color-dark-surface);
+}
+
+.text-base {
+    color: var(--color-dark-text);
+}
