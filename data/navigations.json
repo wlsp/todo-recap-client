@@ -1,6 +1,6 @@
 {
   "headerItems": {
-      "logo": "/src/assets/misc-4.svg",
+      "logo": "/todos/assets/misc-4.svg",
       "navItems": [
         {
           "link": "Todos",

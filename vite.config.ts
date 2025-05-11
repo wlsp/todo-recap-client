@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/todos", //to be removed when no basepath is used
   plugins: [
     react(),
     tailwindcss(),
@@ -16,10 +17,9 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': {
+      "/api": {
         target: 'http://localhost:8080',
       },
     },
-    open: '/todos', //remove when no basepath is used
   },
 })
